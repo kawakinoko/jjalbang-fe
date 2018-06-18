@@ -1,0 +1,9 @@
+<div class="search-results"
+     infinite-scroll
+     [infiniteScrollDistance]="scrollDistance"
+     [infiniteScrollThrottle]="throttle"
+     (scrolled)="onScrollDown()">
+  <p *ngFor="let i of numArray">
+    test
+  </p>
+</div>
