@@ -2,7 +2,7 @@
      infinite-scroll
      [infiniteScrollDistance]="scrollDistance"
      [infiniteScrollThrottle]="throttle"
-     (scrolled)="onScrollDown()">
+     (scrolled)="onScrollDown($event)">
   <mat-grid-tile class="image-card" *ngFor="let image of images">
     <img class="image" [src]="image.viewUrl" (click)="downloadFile(image)">
     <mat-grid-tile-footer class="nametag">{{image.name}}</mat-grid-tile-footer>
