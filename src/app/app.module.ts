@@ -10,6 +10,9 @@ import { MaterialModule } from './material.module';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { FileDropModule } from 'ngx-file-drop';
 import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { UploaderService } from './uploader/uploader.service';
 
 @NgModule({
   declarations: [
@@ -23,9 +26,11 @@ import { HttpClientModule } from '@angular/common/http';
     MaterialModule,
     InfiniteScrollModule,
     FileDropModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule,
+    AngularFontAwesomeModule
   ],
-  providers: [],
+  providers: [UploaderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

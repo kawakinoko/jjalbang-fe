@@ -1,9 +1,10 @@
-<div class="search-results"
+<mat-grid-list cols="4" class="search-results"
      infinite-scroll
      [infiniteScrollDistance]="scrollDistance"
      [infiniteScrollThrottle]="throttle"
      (scrolled)="onScrollDown()">
-  <p *ngFor="let i of numArray">
-    test
-  </p>
-</div>
+  <mat-grid-tile class="image-card" *ngFor="let image of images">
+    <img class="image" [src]="image.viewUrl" (click)="downloadFile(image)">
+    <mat-grid-tile-footer class="nametag">{{image.name}}</mat-grid-tile-footer>
+  </mat-grid-tile>
+</mat-grid-list>

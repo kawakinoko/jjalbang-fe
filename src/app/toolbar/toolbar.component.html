@@ -1,3 +1,16 @@
-<mat-toolbar>
-  Tool Bar
+<mat-toolbar class="app-toolbar" color="secondary">
+  <div class="left">
+    <button mat-button routerLink="/">
+      짤방저장소
+    </button>
+    <button mat-raised-button
+            type="button"
+            color="primary"
+            routerLink="/uploader">
+      Upload
+    </button>
+  </div>
+  <div class="right">
+    <i class="fa fa-github fa-2x" (click)="openGithub()"></i>
+  </div>
 </mat-toolbar>

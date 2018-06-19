@@ -1,0 +1,12 @@
+.image-card .image {
+  width: 100%
+}
+
+.image-card .image:hover {
+  opacity: .5;
+  cursor: pointer;
+}
+.image-card .nametag {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -12,4 +12,7 @@ export class ToolbarComponent implements OnInit {
   ngOnInit() {
   }
 
+  openGithub() {
+    window.open('https://github.com/kawakinoko/jjalbang-fe');
+  }
 }
