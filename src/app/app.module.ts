@@ -13,6 +13,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { UploaderService } from './uploader/uploader.service';
+import { UserinfoService } from './auth/userinfo.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -28,9 +30,10 @@ import { UploaderService } from './uploader/uploader.service';
     FileDropModule,
     HttpClientModule,
     AppRoutingModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    BrowserAnimationsModule
   ],
-  providers: [UploaderService],
+  providers: [UploaderService, UserinfoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { UserInfo } from '../share/user.model';
 
 @Component({
   selector: 'app-toolbar',
@@ -7,6 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ToolbarComponent implements OnInit {
 
+  @Input()
+  user: UserInfo;
+
+  showUserInfo = false;
+
   constructor() { }
 
   ngOnInit() {
@@ -14,5 +20,13 @@ export class ToolbarComponent implements OnInit {
 
   openGithub() {
     window.open('https://github.com/kawakinoko/jjalbang-fe');
+  }
+
+  openLogin() {
+    window.open('/login/oauth2/code/google');
+  }
+
+  toggleUserInfo() {
+    this.showUserInfo = !this.showUserInfo;
   }
 }

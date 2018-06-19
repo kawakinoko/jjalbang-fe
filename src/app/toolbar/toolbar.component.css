@@ -11,3 +11,8 @@
   color: white;
   cursor: pointer;
 }
+
+.userInfo {
+  position: absolute;
+  right: 0px;
+}
